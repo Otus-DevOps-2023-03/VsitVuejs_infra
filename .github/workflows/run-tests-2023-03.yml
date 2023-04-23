@@ -16,7 +16,7 @@ jobs:
       with:
         ref: ${{ github.ref }}
     - name: Checkout repo with tests
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       with:
         repository: "express42/otus-homeworks"
         ref: 2023-03
