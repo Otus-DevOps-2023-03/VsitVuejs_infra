@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/
+sudo apt-get update
 sudo apt-get install -y apt-transport-https
 sudo apt install -y libcurl3
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
