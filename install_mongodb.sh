@@ -6,3 +6,4 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo service mongod start
 sudo service mongod status
+cat /etc/os-release
