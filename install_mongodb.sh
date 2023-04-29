@@ -1,4 +1,4 @@
-#!/bin/
+#!/bin/bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https
 sudo apt install -y libcurl3
