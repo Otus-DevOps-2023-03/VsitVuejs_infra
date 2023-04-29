@@ -7,4 +7,4 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongod
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo mkdir -p /data/db/
-sudo mongod
+sudo mongod --fork --logpath /var/log/mongod.log
