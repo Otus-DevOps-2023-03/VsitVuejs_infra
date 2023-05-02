@@ -8,7 +8,7 @@
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
-            "use_ipv4_nat": "true",
+            "use_ipv4_nat": "{{user `use_ipv4_nat`}}",
             "platform_id": "standard-v2"
         }
     ],
