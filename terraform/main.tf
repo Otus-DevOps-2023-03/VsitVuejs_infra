@@ -7,6 +7,9 @@ provider "yandex" {
 resource "yandex_compute_instance" "app" {
   name = "reddit-app"
   platform_id = "standard-v2"
+  metadata = {
+    ssh-keys = "ubuntu:${file("~/.ssh/appuser.pub")}}"
+  }
   resources {
     cores  = 2
     memory = 2
