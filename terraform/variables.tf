@@ -4,6 +4,11 @@ variable cloud_id {
 variable folder_id {
   description = "Folder"
 }
+variable count_ci {
+  description = "count compute instance"
+  # Значение по умолчанию
+  default = "1"
+}
 variable zone {
   description = "Zone"
   # Значение по умолчанию
