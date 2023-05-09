@@ -1,3 +1,9 @@
 .idea/
 .git/
 variables.json
+*.tfstate.*.*
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
