@@ -9,3 +9,4 @@ variables.json
 .terraform/
 terra2/
 terra3/
+versions.tf
