@@ -1,12 +1,13 @@
 resource "yandex_compute_instance" "app" {
-  name = "reddit-app"
+  name        = "reddit-app"
+  platform_id = "standard-v2"
 
   labels = {
     tags = "reddit-app"
   }
   resources {
-    cores  = 1
-    memory = 2
+    cores         = 2
+    memory        = 2
     core_fraction = 20
   }
 
@@ -18,10 +19,10 @@ resource "yandex_compute_instance" "app" {
 
   network_interface {
     subnet_id = yandex_vpc_subnet.app-subnet.id
-    nat = true
+    nat       = true
   }
 
   metadata = {
-  ssh-keys = "ubuntu:${file(var.public_key_path)}"
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 }
