@@ -8,7 +8,7 @@ provider "yandex" {
   cloud_id                 = local.cloud_id
   folder_id                = local.folder_id
   zone                     = local.zone
-  service_account_key_file = "/home/user/.ssh/terraform_key.json"
+  service_account_key_file = var.service_account_key_file
 }
 
 resource "yandex_iam_service_account" "sa" {
