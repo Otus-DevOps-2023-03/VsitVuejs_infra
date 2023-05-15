@@ -1,0 +1,12 @@
+cloud_id                 = "id"
+folder_id                = "id"
+zone                     = "ru-central1-a"
+zone_yci                 = "ru-central1-a"
+image_id                 = "id"
+public_key_path          = "path/appuser.pub"
+private_key_path         = "path/appuser"
+subnet_id                = "id"
+service_account_key_file = "path/key.json"
+count_ci                 = 1
+app_disk_image           = "id_image"
+db_disk_image            = "id_image"
