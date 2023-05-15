@@ -9,3 +9,6 @@ variable zone {
   # Значение по умолчанию
   default = "ru-central1-a"
 }
+variable service_account_key_file {
+  description = "key .json"
+}
