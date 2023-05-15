@@ -23,8 +23,6 @@ resource "yandex_compute_instance" "app" {
   }
 
   metadata = {
-#    DATABASE_URL = var.db_ip,
-#    SERVER_IP = var.db_ip,
     ssh-keys = "ubuntu:${file(var.public_key_path)}",
     user-data = <<-EOF
                   #!/bin/bash
