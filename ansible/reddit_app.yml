@@ -44,7 +44,7 @@
     - name: Bundle install
       bundler:
         state: present
-        chdir: /home/appuser/reddit # <-- В какой директории выполнить команду bundle
+        chdir: /home/ubuntu/reddit # <-- В какой директории выполнить команду bundle
       tags: deploy-tag
 
 
