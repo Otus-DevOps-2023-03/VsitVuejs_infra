@@ -1,5 +1,5 @@
 {
-  "key_file": "./files/key.json",
+  "key_file": "./packer/files/key.json",
   "folder_id": "id_folder_example",
   "source_img": "ubuntu-1604-lts",
   "use_ipv4_nat":"true"
