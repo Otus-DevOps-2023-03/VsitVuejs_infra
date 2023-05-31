@@ -11,3 +11,4 @@ terra2/
 terra3/
 versions.tf
 *.retry
+jdauphant.nginx
