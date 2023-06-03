@@ -12,3 +12,9 @@ terra3/
 versions.tf
 *.retry
 jdauphant.nginx
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
