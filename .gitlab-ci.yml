@@ -36,5 +36,7 @@ echo_job:
 build_job:
   stage: build
   script:
-    - docker build -t reddit-app ./docker-reddit
+    - echo $CI_ENVIRONMENT_URL
+    - cd docker-reddit
+    - docker build -t reddit-app .
     - docker run -p 9292:9292 reddit-app
