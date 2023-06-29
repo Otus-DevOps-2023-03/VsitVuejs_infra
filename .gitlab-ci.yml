@@ -19,3 +19,4 @@ build_job:
   stage: build
   script:
     - docker build -t reddit-app ./docker-reddit
+    - docker run -p 9292:9292 reddit-app
