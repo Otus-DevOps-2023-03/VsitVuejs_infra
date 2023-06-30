@@ -41,3 +41,21 @@ terraform.
 ДЗ ansible-3:
 Создали роли для развертывания приложения, теперь мы можем переиспользовать задачи с разными переменными.
 Настроили окружения stage и prod. Добавили роль создания пользователей и ansible_vault
+
+
+ДЗ gitlab-ci-1:
+ - [x] Основное ДЗ
+ - [x] Задание со *
+
+## В процессе сделано:
+ - Развернут гитлаб, настроен gitlab-runner
+ - Автоматизирована настройка gitlaba-a
+
+## Как запустить проект:
+ - В директории gitlab-ci/gitlab-install/terraform/ выполнить terraform apply (подняли ВМ)
+ - В директории gitlab-ci/gitlab-install/ansible/ выполнить ansible-playbook gitlab.yml (поднимаем гитлаб)
+ - Взять токен для гитлаб раннера подставить в gitlab-ci/gitlab-install/ansible/gitlab-runner.yml вместо YOUR_TOKEN_GITLAB
+ - В директории gitlab-ci/gitlab-install/ansible/ выполнить ansible-playbook gitlab-runner.yml (поднимаем гитлаб раннер)
+ - Согласно документации https://docs.gitlab.com/runner/executors/docker.html в config.toml  настроить privileged = true
+   (разрешаем выполнять докер из под докера)
+ - файл .gitlab-ci.2.yml переименовать в .gitlab-ci.yml и перенести в корень репозитория или использовать как образец
