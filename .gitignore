@@ -7,14 +7,14 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
-terra2/
-terra3/
 versions.tf
 *.retry
 jdauphant.nginx
 .vagrant/
-*.log
 *.pyc
 .molecule
 .cache
 .pytest_cache
+.env
+terra2/
+terra3/

@@ -1,0 +1,26 @@
+---
+- hosts: docker
+  become: true
+  tasks:
+    - name: gitlab-runner2
+      docker_container:
+        name: gitlab-runner2
+        state: started
+        image: "gitlab/gitlab-runner:latest"
+        pull: true
+        volumes:
+          - '/srv/gitlabrunner/config:/etc/gitlab-runner'
+          - '/var/run/docker.sock:/var/run/docker.sock'
+        restart_policy: always
+
+    - name: Register gitlab-runner2
+      shell: "docker exec -it gitlab-runner2 gitlab-runner register \
+               --url http://{{hostvars['docker-app-0'].ansible_host}}/ \
+               --non-interactive \
+               --locked=false \
+               --name DockerRunner \
+               --executor docker \
+               --docker-image alpine:latest \
+               --registration-token YOUR_TOKEN_GITLAB \
+               --tag-list 'linux,xenial,ubuntu,docker' \
+               --run-untagged"
